@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 export default function SocialMediaField() {
   return (
-    <div className="flex space-x-5 items-center justify-between text-white">
+    <div className="flex space-x-5 items-center justify-between text-white text-[16px]">
       <Link target="blank" href={"https://www.facebook.com/caressflowtr"}>
         <FaFacebookSquare />
       </Link>

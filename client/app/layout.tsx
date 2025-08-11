@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Rubik } from "next/font/google";
+import { Geist, Geist_Mono, Rubik, Heebo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/landingPageComponents/header/header";
-const geistSans = Rubik({
+const rubikSans = Rubik({
   variable: "--font-rubik-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Rubik({
-  variable: "--font-rubik-sans",
+const heeboSans = Heebo({
+  variable: "--font-heebo-sans",
   subsets: ["latin"],
 });
+
+
 
 export const metadata: Metadata = {
-  title: "Carelessflow TR",
-  description: "Carelessflow TR Case Study",
+  title: "Caressflow TR",
+  description: "Caressflow TR Case Study",
 };
 
 export default function RootLayout({
