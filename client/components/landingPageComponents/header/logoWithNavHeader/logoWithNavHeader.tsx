@@ -1,9 +1,10 @@
 import Image from "next/image"
 import logo from "@/assets/caressFlowLogo.png"
 import Link from "next/link"
+
 export default function LogoWithNavHeader() {
   return (
-    <div className="flex justify-start items-center py-[30px] text-pink-bg px-16 font-rubik">
+    <div className="flex justify-start items-center p-[30px] text-pink-bg px-16 font-rubik">
       <div className=" mr-60">
         <Link href={'/'}>
           <Image src={logo} alt="CaressFlowLogo" />
