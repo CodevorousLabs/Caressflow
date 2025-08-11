@@ -65,7 +65,7 @@ export default function Slider() {
               href={sliderData[sliderIndex].anchorData}
               className="bg-[#00ACB1] hover:bg-[#00787b] w-full transition p-4 rounded-lg shadow-lg text-white font-semibold text-sm cursor-pointer"
             >
-              <button className="w-1/3 font-bold">Daha Fazla Bilgi +</button>
+              <button className="w-1/3 font-bold cursor-pointer">Daha Fazla Bilgi +</button>
             </a>
           </div>
         </div>

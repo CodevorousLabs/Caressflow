@@ -10,8 +10,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
   --color-pink-bg: #e83185;
+  --color-gray-text: #888989;
   --font-rubik: "Rubik", sans-serif;
   --font-heebo: "Heebo", sans-serif;
 }
