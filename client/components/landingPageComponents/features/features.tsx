@@ -4,6 +4,8 @@ import { CiMedicalClipboard } from "react-icons/ci";
 
 import bg from "@/assets/backgroundTexture.jpg"
 import FeatureCard from "./featureCard"
+import SectionTitle from "../sectionTitle";
+import SectionDescription from "@/components/sectionDescription";
 
 const staticData = [
   {
@@ -30,8 +32,8 @@ export default function Features() {
       <div className="absolute inset-0 bg-white/50"></div>
       
       <div className="flex flex-col justify-center items-center space-y-5 z-10">
-        <p className="text-[15px] text-pink-bg mb-[10px] font-rubik">CARESS FLOW</p>
-        <p className="text-[#888989] text-[58px] mb-[20px] font-bold font-heebo">Bilimle Gelen Sağlık</p>
+        <SectionTitle>CARESS FLOW</SectionTitle>
+        <SectionDescription>Bilimle Gelen Sağlık</SectionDescription>
       </div>
 
       <div className="flex w-full items-start justify-center gap-5 z-10">
