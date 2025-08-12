@@ -29,7 +29,7 @@ export default function Features() {
   return (
     <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative">
       
-      <div className="absolute inset-0 bg-white/10"></div>
+
       
       <div className="flex flex-col justify-center items-center space-y-5 z-10">
         <SectionTitle>CARESS FLOW</SectionTitle>

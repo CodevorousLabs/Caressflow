@@ -48,11 +48,13 @@ export default function News() {
         <SectionDescription>Yayınlar ve Haberler</SectionDescription>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 mb-8">
         {staticData.map((news, index) => (
           <NewsCard key={index} news={news} />
         ))}
       </div>
+
+      <SectionTitle>CARESS FLOW</SectionTitle>
     </div>
   )
 }

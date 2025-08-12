@@ -5,7 +5,7 @@ interface ComponentProps {
 
 export default function FeatureCard({ feat, Icon }: ComponentProps) {
   return (
-    <div className="flex flex-col gap-2 p-10 bg-white w-1/4">
+    <div className="flex flex-col gap-2 p-10 bg-white w-1/4 shadow-sm">
       <div className="flex flex-col justify-start items-start">
         <div className=" w-[70px] h-[70px] bg-[#F8F8F8] flex items-center justify-center text-5xl text-pink-bg">
           <Icon />
