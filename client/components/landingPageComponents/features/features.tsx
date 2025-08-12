@@ -27,7 +27,7 @@ const staticData = [
 
 export default function Features() {
   return (
-    <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative" style={{ backgroundImage: `url(${bg.src})`, backgroundPosition: 'center', }}>
+    <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative">
       
       <div className="absolute inset-0 bg-white/10"></div>
       

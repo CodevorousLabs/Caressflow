@@ -3,15 +3,27 @@ import Features from "./features/features"
 import News from "./news/news"
 import Stats from "./stats/stats"
 import Feedbacks from "./feedbacks/feedbacks"
+import InformationSection from "./informationSection/informationSection"
+import bg from "@/assets/backgroundTexture.jpg"
 export default function LandingPage() {
   return (
-    <main>
+    <main style={{
+      backgroundImage: `url(${bg.src})`,
+      backgroundRepeat: "repeat-y",
+      backgroundSize: "contain",
+
+    }}>
       <Slider />
-      <section>
+      <section className="w-full mx-auto flex flex-col items-center border border-black">
         <Features />
         <Stats />
-        <News />
+        <div className="w-full bg-[#FCF7FF]">
+          <News />
+        </div>
         <Feedbacks />
+        <div className="w-full bg-[#FCF7FF]">
+          <InformationSection />
+        </div>
       </section>
     </main>
   )

@@ -40,13 +40,15 @@ const staticData = [
 
 export default function News() {
   return (
-    <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative bg-[#FCF7FF]">
+    <div
+      className="max-w-[1280px] mx-auto flex flex-col justify-center items-center py-[150px]"
+    >
       <div className="flex flex-col justify-center items-center space-y-5 z-10">
         <SectionTitle>CARESS FLOW</SectionTitle>
         <SectionDescription>Yayınlar ve Haberler</SectionDescription>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {staticData.map((news, index) => (
           <NewsCard key={index} news={news} />
         ))}
