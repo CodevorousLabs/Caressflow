@@ -5,7 +5,7 @@ import { CiMedicalClipboard } from "react-icons/ci";
 import bg from "@/assets/backgroundTexture.jpg"
 import FeatureCard from "./featureCard"
 import SectionTitle from "../sectionTitle";
-import SectionDescription from "@/components/sectionDescription";
+import SectionDescription from "@/components/landingPageComponents/sectionDescription";
 
 const staticData = [
   {
@@ -29,7 +29,7 @@ export default function Features() {
   return (
     <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative" style={{ backgroundImage: `url(${bg.src})`, backgroundPosition: 'center', }}>
       
-      <div className="absolute inset-0 bg-white/50"></div>
+      <div className="absolute inset-0 bg-white/10"></div>
       
       <div className="flex flex-col justify-center items-center space-y-5 z-10">
         <SectionTitle>CARESS FLOW</SectionTitle>
