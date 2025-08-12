@@ -8,14 +8,11 @@ import Link from "next/link";
 export default function LogoWithNavHeader() {
   const { scrollY } = useScroll();
   const [isFixed, setIsFixed] = useState<boolean>(false)
-  useMotionValueEvent(scrollY, "change", (scrollValue) => {
+
+  useMotionValueEvent(scrollY, "change", (scrollValue) => { // Tracks and checks the scroll value if its greater than 300 or not.
     if (scrollValue > 200) setIsFixed(true)
     if (scrollValue < 200) setIsFixed(false)
   })
-
-  const opacity = useTransform(scrollY, [0, 300], [0, 1]);
-  const yOffset = useTransform(scrollY, [0, 300], [-100, 0]);
-
 
   return (
     <>
