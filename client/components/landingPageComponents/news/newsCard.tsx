@@ -7,28 +7,27 @@ interface ComponentProps {
 
 export default function NewsCard({ news }: ComponentProps) {
   return (
-    <div className="flex flex-col justify-between space-y-5 items-start p-5 bg-white rounded-md max-w-[300px]">
-      <div className="overflow-hidden w-full h-[300px]">
+    <div className="bg-white rounded-lg shadow-lg max-w-xs overflow-hidden">
+      <div className="overflow-hidden h-[200px]">
         <Link href={news.title}>
           <Image
             src={news.imageUrl}
-            alt={news.imageUrl}
+            alt={news.title}
             width={300}
             height={200}
-            className="rounded-lg hover:scale-110 duration-200"
+            className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
           />
         </Link>
       </div>
 
-      <div className="flex flex-col">
-        <Link
-          href={news.title}
-          className="font-rubik text-[22px] text-gray-text font-medium hover:text-pink-bg duration-150"
-        >
-          {news.title}
+      <div className="p-5 flex flex-col">
+        <Link href={news.title}>
+          <p className="text-lg font-semibold text-[#888989] hover:text-pink-600 transition duration-200 mb-3">
+            {news.title}
+          </p>
         </Link>
-        <Link href={news.title} className="text-pink-bg font-heebo font-bold">
-          Devamını Oku
+        <Link href={news.title}>
+          <p className="text-pink-600 font-bold">Devamını Oku</p>
         </Link>
       </div>
     </div>

@@ -1,5 +1,3 @@
-
-
 export default function Stats() {
   return (
     <div className="flex relative w-full justify-center items-center h-0">
