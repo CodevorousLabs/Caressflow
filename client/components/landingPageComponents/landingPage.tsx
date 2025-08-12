@@ -4,6 +4,7 @@ import News from "./news/news"
 import Stats from "./stats/stats"
 import Feedbacks from "./feedbacks/feedbacks"
 import InformationSection from "./informationSection/informationSection"
+import Footer from "./footer/footer"
 import bg from "@/assets/backgroundTexture.jpg"
 export default function LandingPage() {
   return (
@@ -23,6 +24,9 @@ export default function LandingPage() {
         <Feedbacks />
         <div className="w-full bg-[#FCF7FF]">
           <InformationSection />
+        </div>
+        <div className="w-full bg-[#FCF7FF]">
+          <Footer />
         </div>
       </section>
     </main>

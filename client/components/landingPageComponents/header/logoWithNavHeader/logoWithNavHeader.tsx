@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function LogoWithNavHeader() {
   return (
     <div className="flex justify-start items-center p-[30px] text-pink-bg px-16 font-rubik">
-      <div className=" mr-60">
+      <div className="mr-60">
         <Link href={'/'}>
           <Image src={logo} alt="CaressFlowLogo" />
         </Link>
