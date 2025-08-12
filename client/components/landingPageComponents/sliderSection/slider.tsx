@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import lale from "../../../assets/lale.jpg";
 import ilac from "@/assets/ilac.jpg";
 import caressFlowDevrimi from "@/assets/caressFlowDevrimi.jpg";
-
+import { motion } from "motion/react"
 const sliderData = [
   {
     title: "Yenilikçi ve Güvenilir Tedavi: Caress Flow",
@@ -39,15 +39,20 @@ export default function Slider() {
   }
 
   return (
-    <div className="relative w-full h-[830px] overflow-hidden font-heebo">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="relative w-full h-[830px] overflow-hidden font-heebo">
+
       <div className="absolute top-0 bottom-0 right-0 left-0 bg-[#930b5c]/40 z-10" />
 
-      <div
+      <motion.div
         className="absolute inset-0 bg-cover bg-center transition-all duration-700"
         style={{
           backgroundImage: `url(${sliderData[sliderIndex].imageUrl.src})`,
         }}
-      ></div>
+      ></motion.div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 space-y-2">
         <div className="flex flex-col w-full justify-around space-y-20 h-1/2 items-center z-40">
@@ -83,6 +88,6 @@ export default function Slider() {
       >
         <FaChevronRight size={20} />
       </button>
-    </div>
+    </motion.div>
   )
 }
