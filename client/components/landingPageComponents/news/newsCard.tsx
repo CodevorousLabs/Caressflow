@@ -10,12 +10,15 @@ export default function NewsCard({ news }: ComponentProps) {
     <div className="bg-white rounded-lg shadow-lg max-w-xs overflow-hidden flex flex-col justify-between p-3">
       <div className="overflow-hidden h-[272px] relative">
         <Link href={news.title}>
-          <Image
-            src={news.imageUrl}
-            alt={news.title}
-            fill
-            className="bg-white absolute rounded-md shadow-sm hover:scale-110 duration-150"
-          />
+          <div className="relative h-full w-full">
+            <Image
+              src={news.imageUrl}
+              alt={news.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="bg-white absolute rounded-md shadow-sm hover:scale-110 duration-150"
+            />
+          </div>
         </Link>
       </div>
 

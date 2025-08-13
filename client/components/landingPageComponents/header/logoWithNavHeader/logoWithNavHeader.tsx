@@ -21,7 +21,7 @@ export default function LogoWithNavHeader() {
     if (scrollValue > 200) setIsFixed(true)
     if (scrollValue < 200) setIsFixed(false)
   })
-  console.log(openMenu)
+
   return (
     <>
       <motion.div
