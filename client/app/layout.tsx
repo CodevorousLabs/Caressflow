@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rubik, Heebo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/landingPageComponents/header/header";
+import LoadingLayout from "@/components/layoutComponents/loadingLayout";
 const rubikSans = Rubik({
   variable: "--font-rubik-sans",
   subsets: ["latin"],
@@ -29,8 +30,10 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        <Header />
-        {children}
+        <LoadingLayout>
+          <Header />
+          {children}
+        </LoadingLayout>
       </body>
     </html>
   );
