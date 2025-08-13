@@ -17,7 +17,7 @@ export default function LandingPage() {
       <Slider />
       <section className="w-full mx-auto flex flex-col items-center border border-black">
         <Features />
-        <Stats />
+        {/* <Stats /> */}
         <div className="w-full bg-[#FCF7FF]">
           <News />
         </div>
