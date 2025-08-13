@@ -13,7 +13,7 @@ import Image from "next/image";
 import logo from "@/assets/caressFlowLogo.png";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
-
+import ResponsiveNavMenu from "../responsiveNavMenu/responsiveNavMenu";
 export default function ResponsiveHeader() {
   const { scrollY } = useScroll();
   const [isFixed, setIsFixed] = useState<boolean>(false)
@@ -39,11 +39,11 @@ export default function ResponsiveHeader() {
           <SheetTrigger><RxHamburgerMenu className="text-2xl" /></SheetTrigger>
           <SheetContent side="left">
             <SheetHeader>
-              <SheetTitle>Logo</SheetTitle>
-              <SheetDescription>
-                NavBar
-              </SheetDescription>
+              <SheetTitle><Image src={logo} alt="CaressFlowLogo" className="max-[500px]:w-24 h-auto mb-10" /></SheetTitle>
             </SheetHeader>
+            <SheetDescription asChild>
+              <ResponsiveNavMenu />
+            </SheetDescription>
           </SheetContent>
         </Sheet>
       </motion.div>
@@ -64,7 +64,17 @@ export default function ResponsiveHeader() {
           </Link>
         </div>
 
-        <RxHamburgerMenu className="text-2xl" />
+        <Sheet>
+          <SheetTrigger><RxHamburgerMenu className="text-2xl" /></SheetTrigger>
+          <SheetContent side="left">
+            <SheetHeader>
+              <SheetTitle><Image src={logo} alt="CaressFlowLogo" className="max-[500px]:w-24 h-auto mb-10" /></SheetTitle>
+              <SheetDescription asChild>
+                <ResponsiveNavMenu />
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </motion.div>
     </>
   );
