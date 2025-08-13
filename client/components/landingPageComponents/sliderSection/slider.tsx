@@ -65,7 +65,7 @@ export default function Slider() {
             </p>
           </div>
 
-          <div className="w-full sm:w-3/5 md:w-1/2 lg:w-1/3">
+          <div className="w-full sm:w-3/5 md:w-1/2 lg:w-1/6">
             <a
               href={sliderData[sliderIndex].anchorData}
               className="bg-[#00ACB1] hover:bg-[#00787b] w-full transition p-3 sm:p-4 rounded-lg shadow-lg text-white font-semibold text-xs sm:text-sm md:text-base cursor-pointer block"
