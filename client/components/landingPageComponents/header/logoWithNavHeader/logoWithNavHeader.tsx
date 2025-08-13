@@ -16,7 +16,7 @@ import Link from "next/link";
 export default function LogoWithNavHeader() {
   const { scrollY } = useScroll();
   const [isFixed, setIsFixed] = useState<boolean>(false)
-  const [openMenu, setOpenMenu] = useState<string>("")
+
   useMotionValueEvent(scrollY, "change", (scrollValue) => { // Tracks and checks the scroll value if its greater than 300 or not.
     if (scrollValue > 200) setIsFixed(true)
     if (scrollValue < 200) setIsFixed(false)

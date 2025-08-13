@@ -6,13 +6,13 @@ import Feedbacks from "./feedbacks/feedbacks"
 import InformationSection from "./informationSection/informationSection"
 import Footer from "./footer/footer"
 import bg from "@/assets/backgroundTexture.jpg"
+import GoUpButton from "./goUpButton"
 export default function LandingPage() {
   return (
-    <main style={{
+    <main className="relative" style={{
       backgroundImage: `url(${bg.src})`,
       backgroundRepeat: "repeat-y",
       backgroundSize: "contain",
-
     }}>
       <Slider />
       <section className="w-full mx-auto flex flex-col items-center border border-black">
@@ -29,6 +29,7 @@ export default function LandingPage() {
           <Footer />
         </div>
       </section>
+      <GoUpButton />
     </main>
   )
 }
