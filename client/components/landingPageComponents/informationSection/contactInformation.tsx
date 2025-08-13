@@ -15,21 +15,21 @@ export default function ContactInformation() {
         <div className="p-2 border border-[##EBF2F3] rounded-full">
           <MdOutlineLocationOn className="text-pink-bg overflow-visible text-lg" />
         </div>
-        <p className="text-[#686A6F] text-sm">Ataköy 7-8-9-10. Kısım Mahallesi, Çobançeşme E-5 Yanyol Caddesi, Ataköy Towers 20-A/52 Bakırköy/İstanbul</p>
+        <p className="text-[#686A6F]">Ataköy 7-8-9-10. Kısım Mahallesi, Çobançeşme E-5 Yanyol Caddesi, Ataköy Towers 20-A/52 Bakırköy/İstanbul</p>
       </div>
 
       <div className="flex items-center space-x-7">
         <div className="p-2 border border-[##EBF2F3] rounded-full">
           <FiPhone className="text-pink-bg overflow-visible text-lg" />
         </div>
-        <a href="tel:905375224051" className="text-pink-bg text-sm">0537 522 40 51</a>
+        <a href="tel:905375224051" className="text-pink-bg">0537 522 40 51</a>
       </div>
 
       <div className="flex items-center space-x-7">
         <div className="p-2 border border-[##EBF2F3] rounded-full">
           <FaRegEnvelope className="text-pink-bg overflow-visible text-lg max" />
         </div>
-        <a href="mailto:info@caressflow.com.tr" className="text-[#686A6F] text-sm">info@caressflow.com.tr</a>
+        <a href="mailto:info@caressflow.com.tr" className="text-[#686A6F]">info@caressflow.com.tr</a>
       </div>
     </div>
   );
