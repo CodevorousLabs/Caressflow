@@ -48,7 +48,7 @@ export default function Slider() {
       <div className="absolute top-0 bottom-0 right-0 left-0 bg-[#930b5c]/40 z-10" />
 
       <motion.div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+        className="absolute inset-0 bg-cover bg-center sm:bg-top transition-all duration-700"
         style={{
           backgroundImage: `url(${sliderData[sliderIndex].imageUrl.src})`,
         }}
@@ -56,21 +56,21 @@ export default function Slider() {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 space-y-2">
         <div className="flex flex-col w-full justify-around space-y-20 h-1/2 items-center z-40">
-          <div className="space-y-10">
-            <p className="text-[20px]">
+          <div className="space-y-4 sm:space-y-8">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl">
               {sliderData[sliderIndex].title}
             </p>
-            <p className="text-[72px] font-bold leading-tight">
+            <p className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               {sliderData[sliderIndex].description}
             </p>
           </div>
 
-          <div className="w-1/2">
+          <div className="w-full sm:w-3/5 md:w-1/2 lg:w-1/3">
             <a
               href={sliderData[sliderIndex].anchorData}
-              className="bg-[#00ACB1] hover:bg-[#00787b] w-full transition p-4 rounded-lg shadow-lg text-white font-semibold text-sm cursor-pointer"
+              className="bg-[#00ACB1] hover:bg-[#00787b] w-full transition p-3 sm:p-4 rounded-lg shadow-lg text-white font-semibold text-xs sm:text-sm md:text-base cursor-pointer block"
             >
-              <button className="w-1/3 font-bold cursor-pointer">Daha Fazla Bilgi +</button>
+              <button className="w-full font-bold cursor-pointer">Daha Fazla Bilgi +</button>
             </a>
           </div>
         </div>
@@ -79,12 +79,14 @@ export default function Slider() {
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 z-20 -translate-y-1/2 bg-[#00ACB1] hover:bg-[#00787b] p-3 rounded-full shadow-lg text-white cursor-pointer"
+        aria-label="Previous Slide"
       >
         <FaChevronLeft size={20} />
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 z-20 -translate-y-1/2 bg-[#00ACB1] hover:bg-[#00787b] p-3 rounded-full shadow-lg text-white cursor-pointer"
+        aria-label="Next Slide"
       >
         <FaChevronRight size={20} />
       </button>
