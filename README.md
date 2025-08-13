@@ -22,4 +22,21 @@ Tüm kaynak kod **`client/`** klasörü altında yer almaktadır.
 - **ShadCN UI**
 
    # Ekran Görüntüleri
+<img src="client/readmeImages/noError.PNG">
+
+<img src="client/readmeImages/readme1.PNG">
+
+<img src="client/readmeImages/readme2.PNG">
+
+<img src="client/readmeImages/readme3.PNG">
+
+<img src="client/readmeImages/readme4.PNG">
+
+<img src="client/readmeImages/readme5.PNG">
+
+   # Responsive
+
+<img src="client/readmeImages/responsive1.PNG">
+
+<img src="client/readmeImages/responsive2.PNG">
    
