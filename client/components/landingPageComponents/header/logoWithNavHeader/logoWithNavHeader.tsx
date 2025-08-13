@@ -6,6 +6,16 @@ import {
   MenubarContent,
   MenubarItem,
 } from "@/components/ui/menubar"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
@@ -15,11 +25,12 @@ import Link from "next/link";
 export default function LogoWithNavHeader() {
   const { scrollY } = useScroll();
   const [isFixed, setIsFixed] = useState<boolean>(false)
+  const [openMenu, setOpenMenu] = useState<string>("")
   useMotionValueEvent(scrollY, "change", (scrollValue) => { // Tracks and checks the scroll value if its greater than 300 or not.
     if (scrollValue > 200) setIsFixed(true)
     if (scrollValue < 200) setIsFixed(false)
   })
-
+  console.log(openMenu)
   return (
     <>
       <motion.div
@@ -38,31 +49,34 @@ export default function LogoWithNavHeader() {
 
         <div className="flex justify-center items-center space-x-5 font-heebo text-sm">
           <Link href={'/terapi'}>TEDAVİ</Link>
-          <Menubar className="shadow-none border-none">
-            <MenubarMenu>
-              <MenubarTrigger>AVANTAJLAR</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem asChild>
-                  <Link href="/hasta">HASTA İÇİN AVANTAJLAR</Link>
-                </MenubarItem>
-                <MenubarItem asChild>
-                  <Link href="/doktor">DOKTORLAR İÇİN AVANTAJLAR</Link>
-                </MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-          </Menubar>
+
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">AVANTAJLAR</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink href="/hasta" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           <Link href={'/yayın'}>YAYINLAR VE HABERLER</Link>
           <Link href={'/neredeyiz'}>NEREDEYİZ</Link>
-          <Menubar className="shadow-none border-none">
-            <MenubarMenu>
-              <MenubarTrigger><Link href={'/#'}>REFERANS & GÖRÜŞLER</Link></MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem className="text-gray-text font-heebo hover:text-pink-bg duration-150"><Link href={'/#'}>KULLANICILAR</Link></MenubarItem>
-                <MenubarItem className="text-gray-text font-heebo hover:text-pink-bg duration-150"><Link href={'/#'}>DOKTORLAR</Link></MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-          </Menubar>
+
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">REFERANS & GÖRÜŞLER</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink href="/#" className="text-gray-text hover:text-pink-bg">KULLANICILAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/#" className="text-gray-text hover:text-pink-bg">DOKTORLAR</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <Link href={'/iletisim'}>BİZE ULAŞIN</Link>
         </div>
       </motion.div>
@@ -87,31 +101,34 @@ export default function LogoWithNavHeader() {
 
         <div className="flex justify-center items-center space-x-5 font-heebo text-sm">
           <Link href={'/terapi'}>TEDAVİ</Link>
-          <Menubar className="shadow-none border-none">
-            <MenubarMenu>
-              <MenubarTrigger>AVANTAJLAR</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem className="text-gray-text font-heebo">
-                  <Link href="/hasta">HASTA İÇİN AVANTAJLAR</Link>
-                </MenubarItem>
-                <MenubarItem className="text-gray-text font-heebo">
-                  <Link href="/doktor">DOKTORLAR İÇİN AVANTAJLAR</Link>
-                </MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-          </Menubar>
+
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">AVANTAJLAR</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink href="/hasta" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           <Link href={'/yayın'}>YAYINLAR VE HABERLER</Link>
           <Link href={'/neredeyiz'}>NEREDEYİZ</Link>
-          <Menubar className="shadow-none border-none">
-            <MenubarMenu>
-              <MenubarTrigger>REFERANS & GÖRÜŞLER</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem className="text-gray-text font-heebo hover:text-pink-bg duration-150"><Link href={'/#'}>KULLANICILAR</Link></MenubarItem>
-                <MenubarItem className="text-gray-text font-heebo hover:text-pink-bg duration-150"><Link href={'/#'}>DOKTORLAR</Link></MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-          </Menubar>
+
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">REFERANS & GÖRÜŞLER</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink href="/#" className="text-gray-text hover:text-pink-bg">KULLANICILAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/#" className="text-gray-text hover:text-pink-bg">DOKTORLAR</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <Link href={'/iletisim'}>BİZE ULAŞIN</Link>
         </div>
       </motion.div>
