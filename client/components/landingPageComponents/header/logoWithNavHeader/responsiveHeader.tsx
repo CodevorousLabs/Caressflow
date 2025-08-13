@@ -1,4 +1,12 @@
 'use client'
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
@@ -27,7 +35,17 @@ export default function ResponsiveHeader() {
           </Link>
         </div>
 
-        <RxHamburgerMenu className="text-2xl" />
+        <Sheet>
+          <SheetTrigger><RxHamburgerMenu className="text-2xl" /></SheetTrigger>
+          <SheetContent side="left">
+            <SheetHeader>
+              <SheetTitle>Logo</SheetTitle>
+              <SheetDescription>
+                NavBar
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </motion.div>
 
       {/* FIXED HEADER COMES IN AFTER SCROLL RATE IS GREATER THAN 300 */}
