@@ -46,8 +46,14 @@ export default function LogoWithNavHeader() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">AVANTAJLAR</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <NavigationMenuLink href="/hasta" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
-                  <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                  <ul className="grid w-[200px] gap-4">
+                    <li>
+                      <NavigationMenuLink href="/hasta" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                    </li>
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -98,8 +104,14 @@ export default function LogoWithNavHeader() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">AVANTAJLAR</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <NavigationMenuLink href="/hasta" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
-                  <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                  <ul className="grid w-[200px] gap-4">
+                    <li>
+                      <NavigationMenuLink href="/hasta" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                    </li>
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
