@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Rubik, Heebo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/landingPageComponents/header/header";
 import LoadingLayout from "@/components/layoutComponents/loadingLayout";
+import Footer from "@/components/landingPageComponents/footer/footer";
 const rubikSans = Rubik({
   variable: "--font-rubik-sans",
   subsets: ["latin"],
@@ -33,6 +34,9 @@ export default function RootLayout({
         <LoadingLayout>
           <Header />
           {children}
+          <div className="w-full bg-[#FCF7FF]">
+            <Footer />
+          </div>
         </LoadingLayout>
       </body>
     </html>

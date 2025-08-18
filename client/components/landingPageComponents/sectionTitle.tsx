@@ -6,7 +6,6 @@ export default function SectionTitle({ children }: ComponentProps) {
     <p className="text-pink-bg 
         mb-[10px] 
         font-rubik 
-        font-semibold
         text-center"
     >
       {children}

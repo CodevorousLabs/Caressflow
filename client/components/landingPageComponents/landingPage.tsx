@@ -4,9 +4,9 @@ import News from "./news/news"
 import Stats from "./stats/stats"
 import Feedbacks from "./feedbacks/feedbacks"
 import InformationSection from "./informationSection/informationSection"
-import Footer from "./footer/footer"
 import bg from "@/assets/backgroundTexture.jpg"
 import GoUpButton from "./goUpButton"
+
 export default function LandingPage() {
   return (
     <main className="relative" style={{
@@ -15,7 +15,7 @@ export default function LandingPage() {
       backgroundSize: "contain",
     }}>
       <Slider />
-      <section className="w-full mx-auto flex flex-col items-center border border-black">
+      <section className="w-full mx-auto flex flex-col items-center">
         <Features />
         <Stats />
         <div className="w-full bg-[#FCF7FF]">
@@ -24,9 +24,6 @@ export default function LandingPage() {
         <Feedbacks />
         <div className="w-full bg-[#FCF7FF]">
           <InformationSection />
-        </div>
-        <div className="w-full bg-[#FCF7FF]">
-          <Footer />
         </div>
       </section>
       <GoUpButton />
