@@ -9,7 +9,6 @@ export default function SectionDescription({ children }: ComponentProps) {
         text-2xl sm:text-3xl md:text-4xl lg:text-[58px] 
         mb-[20px] 
         font-bold font-heebo 
-        text-center
       "
     >
       {children}

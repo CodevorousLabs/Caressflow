@@ -51,7 +51,7 @@ export default function LogoWithNavHeader() {
                       <NavigationMenuLink href="/hastalar-icin-avantajlar" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
                     </li>
                     <li>
-                      <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                      <NavigationMenuLink href="/doktorlar-icin-avantajlar" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
                     </li>
                   </ul>
                 </NavigationMenuContent>
@@ -109,7 +109,7 @@ export default function LogoWithNavHeader() {
                       <NavigationMenuLink href="/hastalar-icin-avantajlar" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
                     </li>
                     <li>
-                      <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
+                      <NavigationMenuLink href="/doktorlar-icin-avantajlar" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>
                     </li>
                   </ul>
                 </NavigationMenuContent>

@@ -4,7 +4,7 @@ interface ComponentProps {
   buttonText: string
 }
 
-export default function informationContainer({ title, description, buttonText }: ComponentProps) {
+export default function InformationContainer({ title, description, buttonText }: ComponentProps) {
   return (
     <div className="
       w-full sm:w-10/12 lg:w-8/12 
@@ -14,6 +14,7 @@ export default function informationContainer({ title, description, buttonText }:
       min-h-[200px] 
       py-10 sm:py-12 lg:py-16
       space-y-6
+      mb-10
     ">
       <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
         {title}

@@ -17,7 +17,7 @@ export default function ResponsiveNavMenu() {
           <AccordionContent>
             <div className="flex flex-col space-y-5 justify-center bg-[#f8f8f8] py-3 px-2">
               <Link href={'/hastalar-icin-avantajlar'} className="text-gray-text font-medium">HASTA İÇİN AVANTAJLAR</Link>
-              <Link href={'/doktorlar'} className="text-gray-text font-medium">DOKTORLAR İÇİN AVANTAJLAR</Link>
+              <Link href={'/doktorlar-icin-avantajlar'} className="text-gray-text font-medium">DOKTORLAR İÇİN AVANTAJLAR</Link>
             </div>
           </AccordionContent>
         </AccordionItem>
