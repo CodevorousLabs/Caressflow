@@ -1,4 +1,4 @@
-'use client'
+
 import {
   Carousel,
   CarouselContent,
@@ -6,13 +6,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { useState } from "react"
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 import lale from "../../../assets/lale.jpg";
 import ilac from "@/assets/ilac.jpg";
 import caressFlowDevrimi from "@/assets/caressFlowDevrimi.jpg";
-import { motion } from "motion/react"
+
 const sliderData = [
   {
     title: "Yenilikçi ve Güvenilir Tedavi: Caress Flow",
@@ -42,15 +40,6 @@ const sliderData = [
 
 export default function Slider() {
 
-  const [sliderIndex, setSliderIndex] = useState<number>(0)
-
-  function nextSlide() {
-    setSliderIndex(prev => prev !== 3 ? prev += 1 : 0)
-  }
-
-  function prevSlide() {
-    setSliderIndex(prev => prev !== 0 ? prev -= 1 : 3)
-  }
 
   return (
     <Carousel className="w-full h-[830px] relative overflow-hidden">
