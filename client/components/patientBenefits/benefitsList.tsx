@@ -1,7 +1,8 @@
 const benefitsData = [
-  { bold: "Güvenli", text: "hiçbir kontrendikasyonu veya yan etkisi yoktur" },
-  { bold: "Etkili", text: "ilk tedaviden itibaren fark edilebilir sonuçlar" },
-  { bold: "Ağrısız", text: "tedavi keyifli ve invaziv değildir" },
+  { bold: "GÜVENLİ", text: "hiçbir kontrendikasyonu veya yan etkisi yoktur" },
+  { bold: "ETKİLİ", text: "ilk tedaviden itibaren fark edilebilir sonuçlar" },
+  { bold: "AĞRISIZ", text: "tedavi keyifli ve invaziv değildir" },
+  { bold: "HIZLI", text: "tedavi 15 dakika sürer" },
   { bold: "İYİLEŞME SÜRESİ GEREKMİYOR", text: "alışkanlıklarınıza hemen geri dönebilirsiniz" }
 ]
 
@@ -17,13 +18,12 @@ export default function BenefitsList() {
         Doğal, oksijen bazlı, invaziv olmayan, keyifli ve risksiz bir tedavi.
       </p>
 
-      <ul className="space-y-3 md:space-y-4 lg:space-y-5 list-disc pl-5">
+      <ul className="space-y-3 md:space-y-4 lg:space-y-5 list-disc pl-5 font-rubik">
         {benefitsData.map((benefit: BenefitType) =>
           <li key={benefit.text} className="text-base md:text-xl lg:text-2xl text-gray-text">
-            <span className="font-rubik text-black text-base md:text-xl lg:text-2xl font-semibold">
+            <span className=" text-black text-base md:text-xl lg:text-2xl">
               {benefit.bold}
-            </span>{" "}
-            {benefit.text}
+            </span> {benefit.text}
           </li>
         )}
       </ul>
