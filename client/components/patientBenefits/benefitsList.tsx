@@ -37,22 +37,25 @@ export default function BenefitsList() {
         )}
       </ul>
 
-      <motion.button
-        className="relative overflow-hidden bg-gradient-to-r from-[#00D0DF] to-[#00BBC9] 
-                 text-white font-semibold tracking-wide uppercase rounded-lg 
-                 px-10 py-5 shadow-lg hover:shadow-pink-400/50 transition-shadow duration-300"
-      >
-        <motion.span
-          initial={{ scale: 0 }}
-          whileHover={{ scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="absolute inset-0 bg-pink-500 origin-center rounded-lg"
-        />
+      <button
+        className="
+    relative inline-block px-6 py-6 font-rubik text-white 
+    rounded-md bg-[#00C1CF] cursor-pointer overflow-hidden
+    transition-transform duration-300 ease-[cubic-bezier(0.02,0.01,0.47,1)]
+    hover:scale-110 hover:shadow-lg
 
+    before:content-[''] before:absolute before:inset-0 before:rounded-md
+    before:bg-[#e83185] before:scale-0 before:opacity-100
+    before:transition-transform before:duration-500 before:ease-[cubic-bezier(0.02,0.01,0.47,1)]
+    hover:before:scale-100
+  "
+      >
         <span className="relative z-10 drop-shadow-md">
           ITALYADAKI CARESS FLOW ÇALIŞMALARINI KEŞFEDİN
+
         </span>
-      </motion.button>
+      </button>
+
     </div>
   )
 }
