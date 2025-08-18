@@ -23,7 +23,7 @@ export default function ImageSection() {
       <SectionDescription>Caress Flow ECM Kursunu (FAD) Keşfedin</SectionDescription>
 
       <Link href={'/'}>
-        <div className='w-full md:w-8/12 lg:w-6/12 mx-auto'>
+        <div className='w-full mx-auto'>
           <Image
             src={fadPic}
             alt='fadPic'
