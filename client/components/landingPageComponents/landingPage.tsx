@@ -3,7 +3,6 @@ import Features from "./features/features"
 import News from "./news/news"
 import Stats from "./stats/stats"
 import Feedbacks from "./feedbacks/feedbacks"
-import InformationSection from "./informationSection/informationSection"
 import bg from "@/assets/backgroundTexture.jpg"
 import GoUpButton from "./goUpButton"
 
@@ -22,9 +21,6 @@ export default function LandingPage() {
           <News />
         </div>
         <Feedbacks />
-        <div className="w-full bg-[#FCF7FF]">
-          <InformationSection />
-        </div>
       </section>
       <GoUpButton />
     </main>

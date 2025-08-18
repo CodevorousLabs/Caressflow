@@ -48,7 +48,7 @@ export default function LogoWithNavHeader() {
                 <NavigationMenuContent>
                   <ul className="grid w-[200px] gap-4">
                     <li>
-                      <NavigationMenuLink href="/hasta" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
+                      <NavigationMenuLink href="/hastalar-icin-avantajlar" className="text-gray-text hover:text-pink-bg">HASTA İÇİN AVANTAJLAR</NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink href="/doktor" className="text-gray-text hover:text-pink-bg">DOKTORLAR İÇİN AVANTAJLAR</NavigationMenuLink>

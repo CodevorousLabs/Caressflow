@@ -31,7 +31,7 @@ export default function BenefitsList() {
       <p className="font-rubik text-[32px]">Doğal, oksijen bazlı, invaziv olmayan, keyifli ve risksiz bir tedavi.</p>
       <ul className="space-y-5 list-disc">
         {benefitsData.map((benefit: BenefitType) =>
-          <li className="text-2xl text-gray-text">
+          <li key={benefit.text} className="text-2xl text-gray-text">
             <span className="font-rubik text-2xl text-black">{benefit.bold}</span> {benefit.text}
           </li>
         )}
