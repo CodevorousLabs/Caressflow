@@ -10,6 +10,12 @@ const sliderData = [
     title: "Yenilikçi ve Güvenilir Tedavi: Caress Flow",
     description: "Genital Sağlıkta Yeni Nesil Tedavi!",
     anchorData: "/terapi",
+    imageUrl: "/assets/sliderVideo.mp4"
+  },
+  {
+    title: "Yenilikçi ve Güvenilir Tedavi: Caress Flow",
+    description: "Genital Sağlıkta Yeni Nesil Tedavi!",
+    anchorData: "/terapi",
     imageUrl: lale
   },
   {
@@ -31,11 +37,11 @@ export default function Slider() {
   const [sliderIndex, setSliderIndex] = useState<number>(0)
 
   function nextSlide() {
-    setSliderIndex(prev => prev !== 2 ? prev += 1 : 0)
+    setSliderIndex(prev => prev !== 3 ? prev += 1 : 0)
   }
 
   function prevSlide() {
-    setSliderIndex(prev => prev !== 0 ? prev -= 1 : 2)
+    setSliderIndex(prev => prev !== 0 ? prev -= 1 : 3)
   }
 
   return (
@@ -45,14 +51,20 @@ export default function Slider() {
       transition={{ duration: 1 }}
       className="relative w-full h-[830px] overflow-hidden font-heebo">
 
-      <div className="absolute top-0 bottom-0 right-0 left-0 bg-[#930b5c]/40 z-10" />
+      {sliderIndex > 0 && <div className="absolute top-0 bottom-0 right-0 left-0 bg-[#930b5c]/40 z-10" />}
 
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center sm:bg-top transition-all duration-700"
-        style={{
-          backgroundImage: `url(${sliderData[sliderIndex].imageUrl.src})`,
-        }}
-      ></motion.div>
+      {sliderIndex === 0 ?
+        <video controls autoPlay={true} loop={true} className="absolute w-full inset-0 sm:bg-top transition-all duration-700">
+          <source src="/assets/sliderVideo.mp4" type="video/mp4" />
+        </video>
+        :
+        <motion.div
+          className="absolute inset-0 bg-cover bg-center sm:bg-top transition-all duration-700"
+          style={{
+            backgroundImage: `url(${sliderData[sliderIndex].imageUrl.src})`,
+          }} />
+      }
+
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 space-y-2">
         <div className="flex flex-col w-full justify-around space-y-20 h-1/2 items-center z-40">
