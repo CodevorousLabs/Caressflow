@@ -15,10 +15,10 @@ export default function informationContainer({ title, description, buttonText }:
       py-10 sm:py-12 lg:py-16
       space-y-6
     ">
-      <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
+      <p className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
         {title}
       </p>
-      <p className="text-white text-lg sm:text-xl lg:text-2xl">
+      <p className="text-lg sm:text-xl lg:text-2xl">
         {description}
       </p>
       <button className="
