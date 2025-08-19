@@ -111,7 +111,20 @@ export default function LogoWithNavHeader() {
         </div>
 
         <div className="flex justify-center items-center space-x-5 font-heebo text-sm">
-          <Link href={'/terapi'}>TEDAVİ</Link>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg"><Link href={'/terapi'}>TERAPİ</Link></NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-4">
+                    <li>
+                      <NavigationMenuLink href="/hastalar-icin-avantajlar" className="text-gray-text hover:text-pink-bg">BİLİMSEL KEŞİF</NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           <NavigationMenu>
             <NavigationMenuList>
