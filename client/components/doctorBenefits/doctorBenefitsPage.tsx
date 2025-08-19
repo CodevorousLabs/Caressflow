@@ -1,16 +1,11 @@
+import MainComponent from "../reusableComponents/mainComponent"
 import bg from "@/public/assets/backgroundTexture.jpg"
 import Benefits from "./benefits"
 import InformationContainer from "../reusableComponents/informationContainer"
 import ImageSection from "./imageSection"
 export default function DoctorBenefitsPage() {
   return (
-    <main className="relative" style={{
-      backgroundImage: `url(${bg.src})`,
-      backgroundRepeat: "repeat-y",
-      backgroundSize: "cover",
-      backgroundPosition: 'center'
-    }}>
-
+    <MainComponent>
       <section className="w-full mx-auto flex flex-col items-start">
         <Benefits />
         <div className="w-full items-center justify-center flex">
@@ -21,6 +16,6 @@ export default function DoctorBenefitsPage() {
           <InformationContainer title="CARESS FLOW'U ÜCRETSİZ DENEYİN" description="STÜDYONUZDA 1 AY ÜCRETSİZ" buttonText="DAHA FAZLA BİLGİ EDİNİN" />
         </div>
       </section>
-    </main>
+    </MainComponent>
   )
 }

@@ -1,18 +1,14 @@
+import MainComponent from "../reusableComponents/mainComponent"
 import Slider from "./sliderSection/slider"
 import Features from "./features/features"
 import News from "./news/news"
 import Stats from "./stats/stats"
 import Feedbacks from "./feedbacks/feedbacks"
-import bg from "@/public/assets/backgroundTexture.jpg"
 import GoUpButton from "./goUpButton"
 
 export default function LandingPage() {
   return (
-    <main className="relative" style={{
-      backgroundImage: `url(${bg.src})`,
-      backgroundRepeat: "repeat-y",
-      backgroundSize: "contain",
-    }}>
+    <MainComponent>
       <Slider />
       <section className="w-full mx-auto flex flex-col items-center">
         <Features />
@@ -23,6 +19,6 @@ export default function LandingPage() {
         <Feedbacks />
       </section>
       <GoUpButton />
-    </main>
+    </MainComponent>
   )
 }

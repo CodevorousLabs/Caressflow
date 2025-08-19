@@ -1,4 +1,4 @@
-import bg from "@/public/assets/backgroundTexture.jpg"
+import MainComponent from "../reusableComponents/mainComponent"
 import SectionTitle from "../reusableComponents/sectionTitle"
 import SectionDescription from "../reusableComponents/sectionDescription"
 import AnimatedButton from "../reusableComponents/animatedButton"
@@ -6,15 +6,10 @@ import ImageComponent from "../reusableComponents/imageComponent"
 import publics1 from "@/public/assets/publicsPage/publics1.png"
 import publics2 from "@/public/assets/publicsPage/publics2.png"
 import InformationContainer from "../reusableComponents/informationContainer"
+
 export default function PublicationsPage() {
   return (
-    <main className="relative" style={{
-      backgroundImage: `url(${bg.src})`,
-      backgroundRepeat: "repeat-y",
-      backgroundSize: "cover",
-      backgroundPosition: 'center'
-    }}>
-
+    <MainComponent>
       <section className="w-full mx-auto flex flex-col items-start">
         <div className="w-full md:w-10/12 lg:w-7/12 mx-auto flex flex-col justify-start items-start py-12 md:py-20 lg:py-[100px] gap-8 md:gap-12 lg:gap-14 px-4">
           <div className="flex flex-col justify-start items-start text-left">
@@ -35,6 +30,6 @@ export default function PublicationsPage() {
           <InformationContainer title="CARESS FLOW'U ÜCRETSİZ DENEYİN" description="STÜDYONUZDA 1 AY ÜCRETSİZ" buttonText="DAHA FAZLA BİLGİ EDİNİN" />
         </div>
       </section>
-    </main>
+    </MainComponent>
   )
 }
