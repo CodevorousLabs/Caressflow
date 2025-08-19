@@ -2,12 +2,12 @@ import SectionTitle from "../sectionTitle"
 import SectionDescription from "../sectionDescription"
 import NewsCard from "./newsCard"
 
-import turkey from '@/assets/newsAssets/haber1.png'
-import why from '@/assets/newsAssets/haber2.png'
-import oxygen from '@/assets/newsAssets/haber3.png'
-import liquid from '@/assets/newsAssets/haber4.png'
-import vest from '@/assets/newsAssets/haber5.png'
-import birth from '@/assets/newsAssets/haber6.png'
+import turkey from '@/public/assets/newsAssets/haber1.png'
+import why from '@/public/assets/newsAssets/haber2.png'
+import oxygen from '@/public/assets/newsAssets/haber3.png'
+import liquid from '@/public/assets/newsAssets/haber4.png'
+import vest from '@/public/assets/newsAssets/haber5.png'
+import birth from '@/public/assets/newsAssets/haber6.png'
 
 
 const staticData = [

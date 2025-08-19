@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
-import logo from "@/assets/caressFlowLogo.png";
+import logo from "@/public/assets/caressFlowLogo.png";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import ResponsiveNavMenu from "../responsiveNavMenu/responsiveNavMenu";

@@ -2,7 +2,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import ContactInformation from "./contactInformation"
-import logo from "@/assets/caressFlowLogo.png"
+import logo from "@/public/assets/caressFlowLogo.png"
 import Image from "next/image";
 import Link from "next/link";
 import FormSection from "./formSection";

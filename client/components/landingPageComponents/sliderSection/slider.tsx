@@ -7,9 +7,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from "next/image";
-import lale from "../../../assets/lale.jpg";
-import ilac from "@/assets/ilac.jpg";
-import caressFlowDevrimi from "@/assets/caressFlowDevrimi.jpg";
+import lale from "@/public/assets/lale.jpg";
+import ilac from "@/public/assets/ilac.jpg";
+import caressFlowDevrimi from "@/public/assets/caressFlowDevrimi.jpg";
 
 const sliderData = [
   {

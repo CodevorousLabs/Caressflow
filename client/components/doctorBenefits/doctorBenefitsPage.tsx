@@ -1,4 +1,4 @@
-import bg from "@/assets/backgroundTexture.jpg"
+import bg from "@/public/assets/backgroundTexture.jpg"
 import Benefits from "./benefits"
 import InformationContainer from "../reusableComponents/informationContainer"
 import ImageSection from "./imageSection"

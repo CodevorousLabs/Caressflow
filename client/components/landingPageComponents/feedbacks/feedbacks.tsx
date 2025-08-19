@@ -1,4 +1,4 @@
-import bg from '@/assets/backgroundTexture.jpg'
+import bg from '@/public/assets/backgroundTexture.jpg'
 import SectionTitle from "../sectionTitle"
 import SectionDescription from "../sectionDescription"
 import FeedbackCard from './feedbackCard'
