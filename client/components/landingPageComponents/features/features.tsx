@@ -3,8 +3,8 @@ import { LiaStethoscopeSolid } from "react-icons/lia";
 import { CiMedicalClipboard } from "react-icons/ci";
 import { FeatureType } from "@/Types/GlobalTypes";
 import FeatureCard from "./featureCard"
-import SectionTitle from "../sectionTitle";
-import SectionDescription from "@/components/landingPageComponents/sectionDescription";
+import SectionTitle from "../../reusableComponents/sectionTitle";
+import SectionDescription from "@/components/reusableComponents/sectionDescription";
 
 
 const staticData: FeatureType[] = [

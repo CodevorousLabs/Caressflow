@@ -1,10 +1,11 @@
 import bg from "@/public/assets/backgroundTexture.jpg"
-import SectionTitle from "../reusableComponents/sectionTitle"
-import SectionDescription from "../reusableComponents/sectionDescription"
-import InformationContainer from "../reusableComponents/informationContainer"
-import ImageComponent from "../reusableComponents/imageComponent"
-import ProtocolPic from "@/public/assets/therapyPage/protokolPic.png"
-export default function TherapyPage() {
+import SectionTitle from "@/components/reusableComponents/sectionTitle"
+import SectionDescription from "@/components/reusableComponents/sectionDescription"
+import InformationContainer from "@/components/reusableComponents/informationContainer"
+import ImageComponent from "@/components/reusableComponents/imageComponent"
+import discoveryPic from "@/public/assets/discoveryPage/discoveryPic.jpg"
+
+export default function ScientificDiscoveryPage() {
   return (
     <main className="relative" style={{
       backgroundImage: `url(${bg.src})`,
@@ -16,12 +17,10 @@ export default function TherapyPage() {
       <section className="w-full mx-auto flex flex-col items-start">
         <div className="w-full md:w-10/12 lg:w-7/12 mx-auto flex flex-col justify-start items-start py-12 md:py-20 lg:py-[100px] gap-8 md:gap-12 lg:gap-14 px-4">
           <div className="flex flex-col justify-start items-start text-left">
-            <SectionTitle>PROTOKOLLER</SectionTitle>
-            <SectionDescription>CARESS FLOW</SectionDescription>
+            <SectionTitle>BİLİMSEL KEŞİFLER</SectionTitle>
+            <SectionDescription>2 doğal elementin sinerjisi: Moleküler Oksijen ve Hyaluronik Asit</SectionDescription>
           </div>
-
-          <SectionDescription>VULVOVAJİNAL ATROFİ VE İDRAR KAÇIRMA</SectionDescription>
-          <ImageComponent imageUrl={ProtocolPic} />
+          <ImageComponent imageUrl={discoveryPic} />
         </div>
 
         <div className="w-full items-center justify-center flex">

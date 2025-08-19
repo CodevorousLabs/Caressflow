@@ -1,5 +1,5 @@
-import SectionTitle from "../sectionTitle"
-import SectionDescription from "../sectionDescription"
+import SectionTitle from "../../reusableComponents/sectionTitle"
+import SectionDescription from "../../reusableComponents/sectionDescription"
 import NewsCard from "./newsCard"
 
 import turkey from '@/public/assets/newsAssets/haber1.png'

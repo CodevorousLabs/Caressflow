@@ -1,5 +1,5 @@
-import SectionTitle from "../landingPageComponents/sectionTitle"
-import SectionDescription from "../landingPageComponents/sectionDescription"
+import SectionTitle from "../reusableComponents/sectionTitle"
+import SectionDescription from "../reusableComponents/sectionDescription"
 import AnimatedButton from "../reusableComponents/animatedButton"
 const benefitsData = [
   { bold: "MAKSİMUM HİJYEN", text: "tek kullanımlık sarf malzemelerinin kullanımı sayesinde." },

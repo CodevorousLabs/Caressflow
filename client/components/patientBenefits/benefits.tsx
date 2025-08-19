@@ -1,5 +1,5 @@
-import SectionTitle from "../landingPageComponents/sectionTitle"
-import SectionDescription from "../landingPageComponents/sectionDescription"
+import SectionTitle from "../reusableComponents/sectionTitle"
+import SectionDescription from "../reusableComponents/sectionDescription"
 import BenefitsList from "./benefitsList"
 
 export default function Benefits() {

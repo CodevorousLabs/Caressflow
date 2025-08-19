@@ -47,7 +47,7 @@ export default function LogoWithNavHeader() {
                 <NavigationMenuContent>
                   <ul className="grid w-[200px] gap-4">
                     <li>
-                      <NavigationMenuLink href="/hastalar-icin-avantajlar" className="text-gray-text hover:text-pink-bg">BİLİMSEL KEŞİF</NavigationMenuLink>
+                      <NavigationMenuLink href="/bilimsel-kesif" className="text-gray-text hover:text-pink-bg">BİLİMSEL KEŞİF</NavigationMenuLink>
                     </li>
                   </ul>
                 </NavigationMenuContent>

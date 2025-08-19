@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import doctorTechSheet from '@/public/assets/doctorBenefits/technicSheet.jpg'
 import fadPic from '@/public/assets/doctorBenefits/fadPic.png'
-import SectionDescription from '../landingPageComponents/sectionDescription'
+import SectionDescription from '../reusableComponents/sectionDescription'
 import ImageComponent from '../reusableComponents/imageComponent'
 export default function ImageSection() {
   return (

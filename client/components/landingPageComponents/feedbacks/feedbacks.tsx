@@ -1,6 +1,6 @@
 import bg from '@/public/assets/backgroundTexture.jpg'
-import SectionTitle from "../sectionTitle"
-import SectionDescription from "../sectionDescription"
+import SectionTitle from "../../reusableComponents/sectionTitle"
+import SectionDescription from "../../reusableComponents/sectionDescription"
 import FeedbackCard from './feedbackCard'
 const staticData = [
   {
