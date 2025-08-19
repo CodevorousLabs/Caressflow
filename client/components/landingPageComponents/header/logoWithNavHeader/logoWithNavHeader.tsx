@@ -47,7 +47,7 @@ export default function LogoWithNavHeader() {
                 <NavigationMenuContent>
                   <ul className="grid w-[200px] gap-4">
                     <li>
-                      <NavigationMenuLink href="/bilimsel-kesif" className="text-gray-text hover:text-pink-bg">BİLİMSEL KEŞİF</NavigationMenuLink>
+                      <NavigationMenuLink href="/bilimsel-kesif" className="text-gray-text hover:text-pink-bg">BİLİMSEL KEŞİFLER</NavigationMenuLink>
                     </li>
                   </ul>
                 </NavigationMenuContent>
@@ -73,8 +73,9 @@ export default function LogoWithNavHeader() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Link href={'/yayinlar-ve-haberler'}>YAYINLAR VE HABERLER</Link>
+          <Link href={'/yayinlar'}>YAYINLAR</Link>
           <Link href={'/neredeyiz'}>NEREDEYİZ</Link>
+          <Link href={'/haberler'}>HABERLER</Link>
 
           <NavigationMenu>
             <NavigationMenuList>
@@ -144,8 +145,10 @@ export default function LogoWithNavHeader() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Link href={'/yayinlar-ve-haberler'}>YAYINLAR VE HABERLER</Link>
+          <Link href={'/yayinlar'}>YAYINLAR</Link>
           <Link href={'/neredeyiz'}>NEREDEYİZ</Link>
+          <Link href={'/haberler'}>HABERLER</Link>
+
 
           <NavigationMenu>
             <NavigationMenuList>

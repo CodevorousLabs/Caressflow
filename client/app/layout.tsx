@@ -5,6 +5,7 @@ import Header from "@/components/landingPageComponents/header/header";
 import LoadingLayout from "@/components/layoutComponents/loadingLayout";
 import Footer from "@/components/landingPageComponents/footer/footer";
 import InformationSection from "@/components/landingPageComponents/informationSection/informationSection";
+import InformationContainer from "@/components/reusableComponents/informationContainer";
 const rubikSans = Rubik({
   variable: "--font-rubik-sans",
   subsets: ["latin"],
@@ -35,6 +36,9 @@ export default function RootLayout({
         <LoadingLayout>
           <Header />
           {children}
+          <div className="w-full items-center justify-center flex">
+            <InformationContainer title="CARESS FLOW'U ÜCRETSİZ DENEYİN" description="STÜDYONUZDA 1 AY ÜCRETSİZ" buttonText="DAHA FAZLA BİLGİ EDİNİN" />
+          </div>
           <div className="w-full bg-[#FCF7FF]">
             <InformationSection />
           </div>

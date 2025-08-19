@@ -1,7 +1,6 @@
 import MainComponent from "../reusableComponents/mainComponent"
 import SectionTitle from "../reusableComponents/sectionTitle"
 import SectionDescription from "../reusableComponents/sectionDescription"
-import InformationContainer from "../reusableComponents/informationContainer"
 import ImageComponent from "../reusableComponents/imageComponent"
 import ProtocolPic from "@/public/assets/therapyPage/protokolPic.png"
 
@@ -17,10 +16,6 @@ export default function TherapyPage() {
 
           <SectionDescription>VULVOVAJİNAL ATROFİ VE İDRAR KAÇIRMA</SectionDescription>
           <ImageComponent imageUrl={ProtocolPic} />
-        </div>
-
-        <div className="w-full items-center justify-center flex">
-          <InformationContainer title="CARESS FLOW'U ÜCRETSİZ DENEYİN" description="STÜDYONUZDA 1 AY ÜCRETSİZ" buttonText="DAHA FAZLA BİLGİ EDİNİN" />
         </div>
       </section>
     </MainComponent>

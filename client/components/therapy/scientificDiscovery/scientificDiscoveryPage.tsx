@@ -1,8 +1,6 @@
 import MainComponent from "@/components/reusableComponents/mainComponent"
-import bg from "@/public/assets/backgroundTexture.jpg"
 import SectionTitle from "@/components/reusableComponents/sectionTitle"
 import SectionDescription from "@/components/reusableComponents/sectionDescription"
-import InformationContainer from "@/components/reusableComponents/informationContainer"
 import ImageComponent from "@/components/reusableComponents/imageComponent"
 import discoveryPic from "@/public/assets/discoveryPage/discoveryPic.jpg"
 
@@ -16,10 +14,6 @@ export default function ScientificDiscoveryPage() {
             <SectionDescription>2 doğal elementin sinerjisi: Moleküler Oksijen ve Hyaluronik Asit</SectionDescription>
           </div>
           <ImageComponent imageUrl={discoveryPic} />
-        </div>
-
-        <div className="w-full items-center justify-center flex">
-          <InformationContainer title="CARESS FLOW'U ÜCRETSİZ DENEYİN" description="STÜDYONUZDA 1 AY ÜCRETSİZ" buttonText="DAHA FAZLA BİLGİ EDİNİN" />
         </div>
       </section>
     </MainComponent>

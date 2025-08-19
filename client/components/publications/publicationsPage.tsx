@@ -5,7 +5,6 @@ import AnimatedButton from "../reusableComponents/animatedButton"
 import ImageComponent from "../reusableComponents/imageComponent"
 import publics1 from "@/public/assets/publicsPage/publics1.png"
 import publics2 from "@/public/assets/publicsPage/publics2.png"
-import InformationContainer from "../reusableComponents/informationContainer"
 
 export default function PublicationsPage() {
   return (
@@ -24,10 +23,6 @@ export default function PublicationsPage() {
           <div className="flex justify-center items-center w-full">
             <AnimatedButton>BİLİMSEL YAYINLAR</AnimatedButton>
           </div>
-        </div>
-
-        <div className="w-full items-center justify-center flex">
-          <InformationContainer title="CARESS FLOW'U ÜCRETSİZ DENEYİN" description="STÜDYONUZDA 1 AY ÜCRETSİZ" buttonText="DAHA FAZLA BİLGİ EDİNİN" />
         </div>
       </section>
     </MainComponent>
