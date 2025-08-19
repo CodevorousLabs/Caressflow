@@ -1,4 +1,5 @@
-import AnimatedButton from "../reusableComponents/animatedButton"
+import AnimatedButton from "./animatedButton"
+
 interface ComponentProps {
   title: string,
   description: string,

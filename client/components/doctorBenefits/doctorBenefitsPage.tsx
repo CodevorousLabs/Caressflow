@@ -1,6 +1,6 @@
 import bg from "@/assets/backgroundTexture.jpg"
 import Benefits from "./benefits"
-import InformationContainer from "../patientBenefits/informationContainer"
+import InformationContainer from "../reusableComponents/informationContainer"
 import ImageSection from "./imageSection"
 export default function DoctorBenefitsPage() {
   return (

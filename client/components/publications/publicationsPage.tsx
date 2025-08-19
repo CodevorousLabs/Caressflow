@@ -5,7 +5,7 @@ import AnimatedButton from "../reusableComponents/animatedButton"
 import ImageComponent from "../reusableComponents/imageComponent"
 import publics1 from "@/assets/publicsPage/publics1.png"
 import publics2 from "@/assets/publicsPage/publics2.png"
-import InformationContainer from "../patientBenefits/informationContainer"
+import InformationContainer from "../reusableComponents/informationContainer"
 export default function PublicationsPage() {
   return (
     <main className="relative" style={{

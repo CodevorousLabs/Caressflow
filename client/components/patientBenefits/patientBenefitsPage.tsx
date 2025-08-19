@@ -1,6 +1,6 @@
 import bg from "@/assets/backgroundTexture.jpg"
 import Benefits from "./benefits"
-import TryForFree from "./informationContainer"
+import TryForFree from "../reusableComponents/informationContainer"
 import FaqSection from "./faqSection"
 export default function PatientBenefitsPage() {
   return (
