@@ -31,8 +31,8 @@ export default function ResponsiveNavMenu() {
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-gray-text text-base font-[500] px-2">REFERANS & GÖRÜŞLER</AccordionTrigger>
           <AccordionContent className="flex flex-col space-y-5 justify-center bg-[#f8f8f8] py-3 px-2">
-            <Link href={'/#'} className="text-gray-text font-[500] px-2">KULLANICILAR</Link>
-            <Link href={'/#'} className="text-gray-text font-[500] px-2">DOKTORLAR</Link>
+            <Link href={'/kullanici-yorumlari'} className="text-gray-text font-[500] px-2">KULLANICILAR</Link>
+            <Link href={'/doktor-yorumlari'} className="text-gray-text font-[500] px-2">DOKTORLAR</Link>
           </AccordionContent>
         </AccordionItem>
 
