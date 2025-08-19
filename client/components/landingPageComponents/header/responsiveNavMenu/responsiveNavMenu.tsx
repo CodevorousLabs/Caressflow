@@ -23,7 +23,7 @@ export default function ResponsiveNavMenu() {
         </AccordionItem>
       </Accordion>
 
-      <Link href={'/yayın'} className="text-gray-text font-[500] px-2">YAYINLAR VE HABERLER</Link>
+      <Link href={'/yayinlar-ve-haberler'} className="text-gray-text font-[500] px-2">YAYINLAR VE HABERLER</Link>
       <Link href={'/neredeyiz'} className="text-gray-text font-[500] px-2">NEREDEYİZ</Link>
 
       <Accordion type="single" collapsible className="w-full">

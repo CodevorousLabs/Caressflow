@@ -59,7 +59,7 @@ export default function LogoWithNavHeader() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Link href={'/yayın'}>YAYINLAR VE HABERLER</Link>
+          <Link href={'/yayinlar-ve-haberler'}>YAYINLAR VE HABERLER</Link>
           <Link href={'/neredeyiz'}>NEREDEYİZ</Link>
 
           <NavigationMenu>
@@ -117,7 +117,7 @@ export default function LogoWithNavHeader() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Link href={'/yayın'}>YAYINLAR VE HABERLER</Link>
+          <Link href={'/yayinlar-ve-haberler'}>YAYINLAR VE HABERLER</Link>
           <Link href={'/neredeyiz'}>NEREDEYİZ</Link>
 
           <NavigationMenu>
