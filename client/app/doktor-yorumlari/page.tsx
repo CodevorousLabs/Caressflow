@@ -1,7 +1,7 @@
-import FeedbacksPage from "@/components/feedbacks/feedbacksPage"
+import DoctorFeedbacksPage from "@/components/landingPageComponents/feedbacks/doctorFeedbacks/doctorFeedbacks"
 
 export default function Page() {
   return (
-    <FeedbacksPage />
+    <DoctorFeedbacksPage />
   )
 }

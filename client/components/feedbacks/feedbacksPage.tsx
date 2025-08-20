@@ -1,12 +1,8 @@
-'use client'
-import { useSearchParams } from "next/navigation"
 import MainComponent from "../reusableComponents/mainComponent"
 import avatar1 from "@/public/assets/userAvatars/userAvatar1.jpg"
 import avatar2 from "@/public/assets/userAvatars/userAvatar2.jpg"
 import avatar3 from "@/public/assets/userAvatars/userAvatar3.jpg"
 import FeedbackCard from "../reusableComponents/feedbackCard"
-
-
 
 const staticData = [
   {
@@ -42,16 +38,22 @@ const staticData = [
 ]
 
 export default function FeedbacksPage() {
-  const params  = useSearchParams()
-  const user = params.get('user')
+
 
   return (
     <MainComponent>
+    <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative">
+{/*       <div className="flex flex-col justify-center items-center space-y-5 z-10">
+        <SectionTitle>CARESS FLOW tedavisinden sonra</SectionTitle>
+        <SectionDescription>Memnun Kalan Hastalar</SectionDescription>
+      </div> */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {staticData.map((fb, i) => (
           <FeedbackCard key={i} feedback={fb} />
         ))}
       </div>
+    </div>
     </MainComponent>
   )
 }

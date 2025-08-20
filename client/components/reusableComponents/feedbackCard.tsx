@@ -13,9 +13,7 @@ interface ComponentProps {
 export default function FeedbackCard({ feedback }: ComponentProps) {
   return (
     <div className="w-full max-w-sm bg-[#FCF7FF] p-6 pt-16 rounded-lg shadow-lg text-center relative flex flex-col items-center">
-
-
-      <div className="absolute -top-12 flex justify-center items-center">
+      <div className="relative flex justify-center items-center">
         <div className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md">
           <Image
             src={feedback.imageURL}

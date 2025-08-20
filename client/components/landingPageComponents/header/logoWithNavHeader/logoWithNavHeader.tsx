@@ -82,8 +82,8 @@ export default function LogoWithNavHeader() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">REFERANS & GÖRÜŞLER</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <NavigationMenuLink href="/kullanici-yorumlari?user=patient" className="text-gray-text hover:text-pink-bg">KULLANICILAR</NavigationMenuLink>
-                  <NavigationMenuLink href="/doktor-yorumlari?user=doctor" className="text-gray-text hover:text-pink-bg">DOKTORLAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/kullanici-yorumlari" className="text-gray-text hover:text-pink-bg">KULLANICILAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/doktor-yorumlari" className="text-gray-text hover:text-pink-bg">DOKTORLAR</NavigationMenuLink>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -155,8 +155,8 @@ export default function LogoWithNavHeader() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-pink-bg hover:text-pink-bg">REFERANS & GÖRÜŞLER</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <NavigationMenuLink href="/kullanici-yorumlari?user=patient" className="text-gray-text hover:text-pink-bg">KULLANICILAR</NavigationMenuLink>
-                  <NavigationMenuLink href="/doktor-yorumlari?user=doctor" className="text-gray-text hover:text-pink-bg">DOKTORLAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/kullanici-yorumlari" className="text-gray-text hover:text-pink-bg">KULLANICILAR</NavigationMenuLink>
+                  <NavigationMenuLink href="/doktor-yorumlari" className="text-gray-text hover:text-pink-bg">DOKTORLAR</NavigationMenuLink>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
