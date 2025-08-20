@@ -1,55 +1,51 @@
 import MainComponent from "@/components/reusableComponents/mainComponent"
-import avatar1 from "@/public/assets/userAvatars/userAvatar1.jpg"
-import avatar2 from "@/public/assets/userAvatars/userAvatar2.jpg"
-import avatar3 from "@/public/assets/userAvatars/userAvatar3.jpg"
-import FeedbackCard from "@/components/reusableComponents/feedbackCard"
 import SectionDescription from "@/components/reusableComponents/sectionDescription"
+import InformationContainer from "@/components/reusableComponents/informationContainer"
+
 const staticData = [
   {
-    name: "Teresa",
-    comment: "Bu yeni çözümü daha önce denemiş bir arkadaşımdan öğrendim. İlk seanstan itibaren çok etkilendim. Tamamen doğal ve risksiz olmasını çok seviyorum. Kesinlikle tavsiye ederim!",
-    imageURL: avatar1
+    title: "Prof. Cagnacci'nin Web Semineri: Meme Kanseri Nedeniyle İatrojenik Menopozda Olan Kadınlar İçin Okşama Akışı",
+    description: "21 Eylül 2021'de Profesör Cagnacci ve Dr. Massarotti tarafından meme kanseri nedeniyle menopoza giren genç kadınlarda Caress Flow tedavisinin etkinliği hakkında sunulan web semineri."
   },
   {
-    name: "Anna",
-    comment: "Bu tedavi sayesinde uzun zamandır uğraştığım bir sorunu çözdüm. Neredeyse alışmıştım... tek bir tedavi döngüsünde neredeyse tamamen ortadan kalktı. Gelecekte daha fazlasını yapacağım.",
-    imageURL: avatar2
+    title: "Prof. Cagnacci. Vajinal Çevre İçin Yeni Terapötik Yaklaşımlar – 20. A.G.E.O. Ulusal Kongresi",
+    description: "Profesör Cagnacci, 31 Mart - 2 Nisan 2022 tarihleri arasında Padova'da düzenlenen 20. Ulusal A.G.E.O. Kongresi'nde meme kanseri nedeniyle menopoza giren genç kadınlarda Caress Flow tedavisinin etkinliğini anlatıyor."
   },
   {
-    name: "Linda",
-    comment: "Doğum yaptıktan sonra sürekli rahatsızlık hissediyordum, bu yüzden bu tedaviyi denedim. Hiçbir ağrım yoktu, sadece hoş ve ferahlatıcı bir histi. Üç seanslık bir tedavi süreci geçirdim ve kendimi çok daha iyi hissediyorum. Teşekkürler!",
-    imageURL: avatar3
+    title: "Prof. Murina'nın Web Semineri: Vulvovajinal Atrofi ve GSM",
+    description: "Yazı düzenlendi."
   },
   {
-    name: "Teresa",
-    comment: "Bu yeni çözümü daha önce denemiş bir arkadaşımdan öğrendim. İlk seanstan itibaren çok etkilendim. Tamamen doğal ve risksiz olmasını çok seviyorum. Kesinlikle tavsiye ederim!",
-    imageURL: avatar1
+    title: "Dr. Tirelli'nin Web Semineri: Okşama Akışı: Klinik Deneyim",
+    description: "Dr. Tirelli, Caress Flow ile ilgili deneyimlerini paylaşıyor."
   },
-  {
-    name: "Anna",
-    comment: "Bu tedavi sayesinde uzun zamandır uğraştığım bir sorunu çözdüm. Neredeyse alışmıştım... tek bir tedavi döngüsünde neredeyse tamamen ortadan kalktı. Gelecekte daha fazlasını yapacağım.",
-    imageURL: avatar2
-  },
-  {
-    name: "Linda",
-    comment: "Doğum yaptıktan sonra sürekli rahatsızlık hissediyordum, bu yüzden bu tedaviyi denedim. Hiçbir ağrım yoktu, sadece hoş ve ferahlatıcı bir histi. Üç seanslık bir tedavi süreci geçirdim ve kendimi çok daha iyi hissediyorum. Teşekkürler!",
-    imageURL: avatar3
-  }
+
 ]
+
 
 export default function DoctorFeedbacksPage() {
   return (
     <MainComponent>
-      <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative">
+      <div className="flex flex-col w-full justify-center items-center px-15 py-30 relative space-y-16">
         <div className="flex flex-col justify-center items-center space-y-5 z-10">
-          <SectionDescription>Doktor Yorumları</SectionDescription>
+          <SectionDescription>Doktor & Profesyonel Yorumları</SectionDescription>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          {staticData.map((fb, i) => (
-            <FeedbackCard key={i} feedback={fb} />
-          ))}
+        <InformationContainer title="CARESS FLOW'U ÜCRETSİZ DENEYİN" description="STÜDYONUZDA 1 AY ÜCRETSİZ" buttonText="DAHA FAZLA BİLGİ EDİNİN" />
+
+        <div className="flex flex-col justify-center items-center space-y-5 z-10">
+          <SectionDescription>Caress Flow Web Seminerleri</SectionDescription>
         </div>
+
+        <div className="flex flex-col justify-start items-start space-y-10 w-full sm:w-10/12 lg:w-8/12">
+          {staticData.map((stat: { title: string, description: string }, i: number) =>
+            <div className="space-y-5" key={i}>
+              <p className="font-heebo text-4xl text-gray-text font-semibold">{stat.title}</p>
+              <p className="font-rubik text-lg">{stat.description}</p>
+            </div>
+          )}
+        </div>
+
       </div>
     </MainComponent>
   )
