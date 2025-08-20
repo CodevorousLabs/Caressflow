@@ -3,6 +3,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { CiHospital1 } from "react-icons/ci";
 import InformationCard from "./informationCard"
 import MainComponent from "../reusableComponents/mainComponent"
+import ContactForm from "./contactForm";
 export default function ContactPage() {
   return (
     <MainComponent>
@@ -23,6 +24,10 @@ export default function ContactPage() {
             title="Email"
             text="info@caressflow.com.tr"
           />
+        </div>
+
+        <div className="flex justify-center items-start w-full mb-10">
+          <ContactForm />
         </div>
       </section>
     </MainComponent>
