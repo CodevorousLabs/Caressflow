@@ -119,10 +119,7 @@ export default function ContactForm() {
       </div>
 
 
-      <button
-        type="submit"
-        className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-md transition cursor-pointer"
-      >
+      <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-md transition cursor-pointer">
         Gönder
       </button>
     </form>
