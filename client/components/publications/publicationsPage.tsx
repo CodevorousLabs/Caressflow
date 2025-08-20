@@ -5,8 +5,14 @@ import AnimatedButton from "../reusableComponents/animatedButton"
 import ImageComponent from "../reusableComponents/imageComponent"
 import publics1 from "@/public/assets/publicsPage/publics1.png"
 import publics2 from "@/public/assets/publicsPage/publics2.png"
+import readPosts from "@/lib/readPosts"
 
-export default function PublicationsPage() {
+export default async function PublicationsPage() {
+  
+  const publics =  readPosts()
+  console.log(publics)
+
+  
   return (
     <MainComponent>
       <section className="w-full mx-auto flex flex-col items-start">

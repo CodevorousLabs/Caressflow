@@ -1,5 +1,6 @@
 import PublicationsPage from "@/components/publications/publicationsPage"
-export default function Page(){
+
+export default async function Page() {
   return (
     <PublicationsPage />
   )
