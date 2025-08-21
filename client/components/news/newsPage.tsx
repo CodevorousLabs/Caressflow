@@ -1,31 +1,12 @@
 import MainComponent from "../reusableComponents/mainComponent"
 import SectionDescription from "../reusableComponents/sectionDescription"
 import NewsCard from "../landingPageComponents/news/newsCard"
-import haber1 from "@/public/assets/newsAssets/haber1.png"
-const staticData = [
-  {
-    title: "Caress Flow bugün Torino'da açık hava konferansında!",
-    imageUrl: haber1
-  },
-  {
-    title: "Caress Flow bugün Torino'da açık hava konferansında!",
-    imageUrl: haber1
-  },
-  {
-    title: "Caress Flow bugün Torino'da açık hava konferansında!",
-    imageUrl: haber1
-  },
-  {
-    title: "Caress Flow bugün Torino'da açık hava konferansında!",
-    imageUrl: haber1
-  },
-  {
-    title: "Caress Flow bugün Torino'da açık hava konferansında!",
-    imageUrl: haber1
-  },
-]
+import readNews from "@/lib/readNews"
 
-export default function NewsPage() {
+export default async function NewsPage() {
+
+  const news = await readNews()
+
   return (
     <MainComponent>
       <section className="w-full mx-auto flex flex-col items-start">
@@ -35,7 +16,7 @@ export default function NewsPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 mb-8">
-            {staticData.map((news, index) => (
+            {news.map((news, index) => (
               <NewsCard key={index} news={news} />
             ))}
           </div>
