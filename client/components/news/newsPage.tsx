@@ -16,8 +16,8 @@ export default async function NewsPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 mb-8">
-            {news.map((news, index) => (
-              <NewsCard key={index} news={news} />
+            {news.map((publishedNew) => (
+              <NewsCard key={publishedNew.slug} publishedNew={publishedNew} />
             ))}
           </div>
         </div>

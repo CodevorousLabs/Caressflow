@@ -1,5 +1,5 @@
 import directus from '@/lib/directus';
-import { readItems } from '@directus/sdk';
+import { readItem } from '@directus/sdk';
 
 interface New {
   slug?: string,
@@ -11,6 +11,6 @@ interface New {
   Image?: string // File Path
 }
 
-export default function readNews(): Promise<Array<New>> {
-  return directus.request(readItems('news'));
+export default function readNew(slug: string): Promise<New> {
+  return directus.request(readItem('news', slug));
 }
