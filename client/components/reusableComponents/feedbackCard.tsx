@@ -1,12 +1,12 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props"
 import { FaQuoteLeft } from 'react-icons/fa'
 import Image from "next/image"
 
 interface ComponentProps {
   feedback: {
+    id: number,
     name: string,
-    comment: string,
-    imageURL: StaticImport | string
+    feedback: string,
+    PatientImage: string
   }
 }
 
@@ -16,7 +16,7 @@ export default function FeedbackCard({ feedback }: ComponentProps) {
       <div className="relative flex justify-center items-center">
         <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md">
           <Image
-            src={feedback.imageURL}
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}/assets/${feedback.PatientImage}`}
             alt={feedback.name}
             fill
             className="object-cover"
@@ -29,10 +29,10 @@ export default function FeedbackCard({ feedback }: ComponentProps) {
 
 
       <p className="mt-10 sm:mt-12 text-sm sm:text-base text-[#686A6F] mb-3 sm:mb-4 leading-6 sm:leading-7 font-rubik">
-        {feedback.comment}
+        {feedback.feedback}
       </p>
 
- 
+
       <p className="text-base sm:text-lg md:text-xl font-semibold text-[#888989] font-heebo">
         {feedback.name}
       </p>
