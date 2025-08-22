@@ -12,7 +12,7 @@ interface ComponentProps {
 
 export default function FeedbackCard({ feedback }: ComponentProps) {
   return (
-    <div className="w-full max-w-xs sm:max-w-sm bg-[#FCF7FF] p-5 sm:p-6 pt-14 sm:pt-16 rounded-lg shadow-md text-center relative flex flex-col items-center">
+    <div className="w-full max-w-xs sm:max-w-sm bg-[#FCF7FF] p-5 sm:p-6 pt-14 sm:pt-16 rounded-lg shadow-md text-center relative flex flex-col items-center justify-between">
       <div className="relative flex justify-center items-center">
         <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md">
           <Image
