@@ -9,7 +9,11 @@ interface ComponentProps {
     user_updated?: string,
     date_updated?: string,
     title?: string,
-    Image?: string // File Path
+    Image?: { // File Path
+      id: string,
+      height: number,
+      width: number
+    } 
   }
 }
 
