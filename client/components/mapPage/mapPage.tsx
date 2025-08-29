@@ -1,7 +1,7 @@
 import MainComponent from "../reusableComponents/mainComponent"
 import SectionTitle from "../reusableComponents/sectionTitle"
 import SectionDescription from "../reusableComponents/sectionDescription"
-
+import MapComponent from "./mapComponent/mapComponent"
 export default function MapPage() {
   return (
     <MainComponent>
@@ -11,9 +11,10 @@ export default function MapPage() {
             <SectionTitle>Sağlık Merkezleri</SectionTitle>
             <SectionDescription>Bizi Nerede Bulabilirsiniz?</SectionDescription>
           </div>
-
-   
         </div>
+
+
+        <MapComponent />
       </section>
     </MainComponent>
   )
