@@ -9,12 +9,23 @@ interface ComponentProps {
     phoneNumber: string,
     location?: { lat: number, lng: number }
   }
-  setFocusedClinic: any
+  setFocusedClinic: any,
+  setZoom: any
 }
 
-export default function AddressCard({ setFocusedClinic, clinic }: ComponentProps) {
+
+
+export default function AddressCard({ setFocusedClinic, setZoom, clinic }: ComponentProps) {
+
+  function chooseLocation() {
+    setFocusedClinic(clinic.location)
+    setZoom(20)
+  }
+
+
+
   return (
-    <div onClick={() => setFocusedClinic(clinic.location)} className="w-full rounded-xl border border-pink-bg bg-white p-4 shadow-md mb-4 cursor-pointer hover:bg-gray-200 duration-150">
+    <div onClick={() => chooseLocation()} className="w-full rounded-xl border border-pink-bg bg-white p-4 shadow-md mb-4 cursor-pointer hover:bg-gray-200 duration-150">
 
       <h2 className="text-lg font-semibold text-gray-800 mb-2">
         {clinic.hospitalName}
