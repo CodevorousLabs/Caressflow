@@ -2,7 +2,14 @@ import MainComponent from "../reusableComponents/mainComponent"
 import SectionTitle from "../reusableComponents/sectionTitle"
 import SectionDescription from "../reusableComponents/sectionDescription"
 import MapComponent from "./mapComponent/mapComponent"
-export default function MapPage() {
+import clinicAdresses from '@/lib/readClinicAdresses'
+export default async function MapPage() {
+  
+  const clinicAddresses = await clinicAdresses()
+  console.log(clinicAddresses)
+  
+  
+  
   return (
     <MainComponent>
       <section className="w-full mx-auto flex flex-col items-start">
@@ -14,7 +21,7 @@ export default function MapPage() {
         </div>
 
 
-        <MapComponent />
+        <MapComponent clinics={clinicAddresses} />
       </section>
     </MainComponent>
   )
