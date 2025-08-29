@@ -1,5 +1,5 @@
 'use client'
-import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps'
+import { Map, Marker, useMapsLibrary } from '@vis.gl/react-google-maps'
 import { useEffect, useState } from 'react'
 import AddressCard from './addressCard'
 
@@ -22,30 +22,32 @@ export default function MapComponent({ clinics }: ComponentProps) {
 
   const [clinicList, setClinicList] = useState(clinics)
   const [focusedClinic, setFocusedClinic] = useState(null)
+  const geocodingLib = useMapsLibrary('geocoding');
   const [zoom, setZoom] = useState<number | null>(6)
-  const [defaultFocus, setDefaultFocus] = useState<{lat: number, lng: number} | null>({ lat: 39.925533, lng: 32.866287 })
-  const API_KEY = process.env.NEXT_PUBLIC_MAPS_API
+  const [defaultFocus, setDefaultFocus] = useState<{ lat: number, lng: number } | null>({ lat: 39.925533, lng: 32.866287 })
   const MAP_ID = process.env.NEXT_PUBLIC_MAP_ID
 
   useEffect(() => {
-    const geocoder = new google.maps.Geocoder();
-    clinics.forEach((clinic: ClinicType, i: number) => {
+    if (!geocodingLib) return;
+
+    const geocoder = new geocodingLib.Geocoder();
+    clinics.forEach((clinic, i) => {
+
       geocoder.geocode({ address: clinic.hospitalName }, (results, status) => {
         if (status === "OK" && results && results[0]) {
-          const loc = results[0].geometry.location
+          const loc = results[0].geometry.location;
           setClinicList((prev) => {
-            const oldList = [...prev]
-            const chosenClinic = oldList[i]
-            chosenClinic.location = { lat: loc.lat(), lng: loc.lng() }
-            return oldList
+            const oldList = [...prev];
+            oldList[i].location = { lat: loc.lat(), lng: loc.lng() };
+            return oldList;
           });
         } else {
-          console.warn(`Geocode failed for ${clinic}: ${status}`);
+          console.warn(`Geocode failed for ${clinic.hospitalName}: ${status}`);
         }
       });
     });
 
-  }, []);
+  }, [geocodingLib, clinics]);
 
   function resetValues() {
     setFocusedClinic(null)
@@ -53,27 +55,26 @@ export default function MapComponent({ clinics }: ComponentProps) {
     setZoom(null)
   }
 
+
   return (
-    <APIProvider apiKey={API_KEY!}>
-      <div className="flex w-full items-start justify-start min-h-[500px] p-10 mb-5 bg-[#F7F7F7]">
-        <div className="flex w-full items-start justify-start min-h-[500px] space-x-3">
-          <div className='w-1/2 max-h-[50vh] overflow-scroll overflow-x-hidden'>
+    <div className="flex w-full items-start justify-start min-h-[500px] p-10 mb-5 bg-[#F7F7F7]">
+      <div className="flex w-full items-start justify-start min-h-[500px] space-x-3">
+        <div className='w-1/2 max-h-[50vh] overflow-scroll overflow-x-hidden'>
+          {clinicList.length > 0 && clinicList.map((clinic) =>
+            <AddressCard key={clinic.id} clinic={clinic} setFocusedClinic={setFocusedClinic} setZoom={setZoom} />
+          )
+          }
+        </div>
+        <div className="flex flex-col w-full" style={{ height: "50vh" }}>
+          <Map id={MAP_ID} center={focusedClinic ? focusedClinic : defaultFocus} zoom={zoom} onMouseover={() => resetValues()}>
             {clinicList.length > 0 && clinicList.map((clinic) =>
-              <AddressCard key={clinic.id} clinic={clinic} setFocusedClinic={setFocusedClinic} setZoom={setZoom} />
+              <Marker key={clinic.id} position={clinic.location} />
             )
             }
-          </div>
-
-          <div className="flex flex-col w-full" style={{ height: "50vh" }}>
-            <Map id={MAP_ID} center={focusedClinic ? focusedClinic : defaultFocus} zoom={zoom} onMouseover={() => resetValues()}>
-              {clinicList.length > 0 && clinicList.map((clinic) =>
-                <Marker key={clinic.id} position={clinic.location} />
-              )
-              }
-            </Map>
-          </div>
+          </Map>
         </div>
       </div>
-    </APIProvider >
+    </div>
+
   )
 }
