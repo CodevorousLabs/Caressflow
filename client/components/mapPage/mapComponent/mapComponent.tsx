@@ -28,8 +28,8 @@ export default function MapComponent({ clinics }: ComponentProps) {
   useEffect(() => {
     const geocoder = new google.maps.Geocoder();
 
-    clinics.forEach((clinic, i: number) => {
-      geocoder.geocode({ address: clinic.adress }, (results, status) => {
+    clinics.forEach((clinic: ClinicType, i: number) => {
+      geocoder.geocode({ address: clinic.hospitalName }, (results, status) => {
         if (status === "OK" && results && results[0]) {
           const loc = results[0].geometry.location
           setClinicList((prev) => {
@@ -47,21 +47,23 @@ export default function MapComponent({ clinics }: ComponentProps) {
 
   return (
     <APIProvider apiKey={API_KEY!}>
-      <div className="flex w-full items-start justify-start min-h-[500px]">
-        <div className='w-1/2 max-h-[50vh] overflow-scroll overflow-x-hidden'>
-          {clinicList.length > 0 && clinicList.map((clinic) =>
-            <AddressCard key={clinic.id} clinic={clinic} setFocusedClinic={setFocusedClinic} />
-          )
-          }
-        </div>
-
-        <div className="flex flex-col w-full" style={{ height: "50vh" }}>
-          <Map id={MAP_ID} center={focusedClinic && focusedClinic} onMouseover={() => setFocusedClinic(null)}>
+      <div className="flex w-full items-start justify-start min-h-[500px] p-10 mb-5 bg-[#F7F7F7]">
+        <div className="flex w-full items-start justify-start min-h-[500px] space-x-3">
+          <div className='w-1/2 max-h-[50vh] overflow-scroll overflow-x-hidden'>
             {clinicList.length > 0 && clinicList.map((clinic) =>
-              <Marker key={clinic.id} position={clinic.location} />
+              <AddressCard key={clinic.id} clinic={clinic} setFocusedClinic={setFocusedClinic} />
             )
             }
-          </Map>
+          </div>
+
+          <div className="flex flex-col w-full" style={{ height: "50vh" }}>
+            <Map id={MAP_ID} center={focusedClinic && focusedClinic} onMouseover={() => setFocusedClinic(null)}>
+              {clinicList.length > 0 && clinicList.map((clinic) =>
+                <Marker key={clinic.id} position={clinic.location} />
+              )
+              }
+            </Map>
+          </div>
         </div>
       </div>
     </APIProvider >

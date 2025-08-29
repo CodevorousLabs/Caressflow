@@ -6,9 +6,6 @@ import clinicAdresses from '@/lib/readClinicAdresses'
 export default async function MapPage() {
   
   const clinicAddresses = await clinicAdresses()
-  console.log(clinicAddresses)
-  
-  
   
   return (
     <MainComponent>
